@@ -1,0 +1,120 @@
+body {
+	background-color: #010116;
+}
+
+.ball-box {
+	width: 50%;
+	min-width: 320px;
+	height: 125px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+ul {
+	display: flex;
+	align-items: space-between;
+	justify-content: space-around;
+	padding: 0;
+	margin: 0;
+}
+li {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background:linear-gradient(#3ed610 , #9503c2);
+  list-style-type: none;
+  box-shadow: 0 0 15px rgb(0, 255, 60),              0 0 20px rgb(0, 255, 255);
+  opacity: 0;
+  animation: 2s ease-in-out infinite;
+  animation-name: upwards;
+}
+.red-ball li {
+	background:linear-gradient(#2E3192 , #1BFFFF);
+	animation-name: downwards;
+}
+li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+li:nth-child(3) {
+	animation-delay: 0.2s;
+}
+li:nth-child(4) {
+	animation-delay: 0.3s;
+}
+li:nth-child(5) {
+	animation-delay: 0.4s;
+}
+li:nth-child(6) {
+	animation-delay: 0.5s;
+}
+li:nth-child(7) {
+	animation-delay: 0.6s;
+}
+li:nth-child(8) {
+	animation-delay: 0.7s;
+}
+li:nth-child(9) {
+	animation-delay: 0.8s;
+}
+li:nth-child(10) {
+	animation-delay: 0.9s;
+}
+li:nth-child(11) {
+	animation-delay: 1s;
+}
+li:nth-child(12) {
+	animation-delay: 1.1s;
+}
+li:nth-child(13) {
+	animation-delay: 1.2s;
+}
+li:nth-child(14) {
+	animation-delay: 1.3s;
+}
+li:nth-child(15) {
+	animation-delay: 1.4s;
+}
+
+@keyframes upwards {
+	from {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 50;
+    filter: hue-rotate(0deg) ;
+    -webkit-filter: hue-rotate(0deg) ;
+}
+	50% {
+		transform: translateY(125px) scale(1.2);
+	}
+	to {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 1;
+    filter: hue-rotate(360deg) ;
+    -webkit-filter: hue-rotate(360deg) ;
+}
+}
+@keyframes downwards {
+	from {
+		opacity: 1;
+		transform: translateY(0) scale(1.2);
+		z-index: 1;
+    filter: hue-rotate(0deg) ;
+    -webkit-filter: hue-rotate(0deg) ;
+	}
+	50% {
+		transform: translateY(-125px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1.2);
+		z-index: 50;
+    filter: hue-rotate(360deg) ;
+    -webkit-filter: hue-rotate(360deg) ;
+	}
+}
